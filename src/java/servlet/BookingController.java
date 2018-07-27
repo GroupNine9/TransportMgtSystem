@@ -69,8 +69,7 @@ public class BookingController extends HttpServlet {
         newtrip.setReturndate(request.getParameter("returndate"));
         newtrip.setPasscount(request.getParameter("passcount"));
         newtrip.setDuration(request.getParameter("duration"));
-        
-        
+            
         
         BookedtripFacade.create(newtrip);
         
