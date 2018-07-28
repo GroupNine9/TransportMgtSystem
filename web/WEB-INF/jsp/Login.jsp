@@ -16,8 +16,8 @@
             <h2>Egerton Transport System</h2>
             <form action="<%=request.getContextPath() %>/LoginController" method="post">
                 <div class="inputBox">
-                    <input type="text" name="reg_number" required="" >
-                    <label>Reg Number </label>
+                    <input type="text" name="staffId" required="" >
+                    <label>Staff Id </label>
                 </div>
                 <div class="inputBox">
                     <input type="password" name="password" required="" >

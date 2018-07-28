@@ -14,7 +14,8 @@ import javax.persistence.Id;
  * @author GraceTina
  */
 @Entity
-public class Staff implements Serializable {
+public class Staff implements Serializable 
+{
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -37,34 +38,42 @@ public class Staff implements Serializable {
     @Column(nullable = false, length = 30)
     private String staffRole;
 
-    public Staff() {
+    public Staff() 
+    {
     }
 
-    public String getPassword() {
+    public String getPassword()
+    {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password) 
+    {
         this.password = password;
     }
 
-    public Long getStaffId() {
+    public Long getStaffId() 
+    {
         return staffId;
     }
 
-    public void setStaffId(Long staffId) {
+    public void setStaffId(Long staffId) 
+    {
         this.staffId = staffId;
     }
 
-    public String getSurName() {
+    public String getSurName() 
+    {
         return surName;
     }
 
-    public void setSurName(String surName) {
+    public void setSurName(String surName) 
+    {
         this.surName = surName;
     }
 
-    public String getOtherNames() {
+    public String getOtherNames() 
+    {
         return otherNames;
     }
 
