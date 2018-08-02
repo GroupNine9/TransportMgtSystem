@@ -1,14 +1,17 @@
-
+<%-- 
+    Document   : Trips
+    Created on : Jul 30, 2018, 12:26:42 PM
+    Author     : Grace
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>HOME</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <a href="View.management.jsp" target="_parent">ADMIN</a>
+        <h1>Hello World!</h1>
     </body>
 </html>

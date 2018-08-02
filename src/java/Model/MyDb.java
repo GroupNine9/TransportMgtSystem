@@ -7,23 +7,26 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MyDb {
-    Connection con;
-    String driverName = "com.mysql.jdbc.Driver";
-    String connectionURL = "jdbc:mysql://localhost:3306/users?";
-    String username = "root";
-    String password = "";
+             public Connection con;
+             String driverName = "com.mysql.jdbc.Driver";
+             String connectionURL = "jdbc:mysql://localhost:3306/transportmanagement?";
+             String username = "root";
+             String password = "";
     
     public Connection getCon()
     {
-        try
-        {
-            Class.forName(driverName);
-            con = DriverManager.getConnection(connectionURL,username, password);
-        }
-        catch (ClassNotFoundException | SQLException e) 
-        {
-            e.printStackTrace();
-        }
+                try {
+                     Class.forName(driverName);
+                 } catch (ClassNotFoundException ex) {
+                     Logger.getLogger(MyDb.class.getName()).log(Level.SEVERE, null, ex);
+                 }
+                 try {
+                     con = DriverManager.getConnection(connectionURL, username, password);
+                 } catch (SQLException ex) {
+                     Logger.getLogger(MyDb.class.getName()).log(Level.SEVERE, null, ex);
+                 }
+         
         return con;
     }
+     
 }
