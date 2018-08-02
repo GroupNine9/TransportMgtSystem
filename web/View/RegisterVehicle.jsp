@@ -10,7 +10,7 @@
     <body>
         <jsp:useBean id="vehicle" scope="request" class="beans.Vehicle"></jsp:useBean>
         
-        <form  action="RegisterVehicleServelet" method="post">
+        <form  action="<%=request.getContextPath() %>/RegisterVehicleServelet" method="post">
             VEHICLE ID <br>
             <input type="text" name="vehicleid" value="<jsp:getProperty name="vehicle" property="vehicleid"/>"><br>
         
