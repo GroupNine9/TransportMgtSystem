@@ -11,15 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 
 public class RegisterStaffServelet extends HttpServlet{
     
+  
  protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try(PrintWriter out = response.getWriter()) {
                     
         Staff staff = new Staff();
-        //int staffid = Integer.parseInt(request.getParameter("staffid"));
-        //int idnumber = Integer.parseInt(request.getParameter("idnumber"));
-        //int phonenumber = Integer.parseInt(request.getParameter("phonenumber"));
+       
 
         staff.setStaffid(request.getParameter("staffid"));
         staff.setName(request.getParameter("name"));

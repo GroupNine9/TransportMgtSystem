@@ -7,6 +7,10 @@
         <servlet-name>Home</servlet-name>
         <servlet-class>Control.Home</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PendingAcademicTripsServelet</servlet-name>
+        <servlet-class>Control.PendingAcademicTripsServelet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/Home</url-pattern>
@@ -26,6 +30,10 @@
     <servlet-mapping>
         <servlet-name>RegisterVehicleServelet</servlet-name>
         <url-pattern>/RegisterVehicleServelet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PendingAcademicTripsServelet</servlet-name>
+        <url-pattern>/PendingAcademicTripsServelet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
