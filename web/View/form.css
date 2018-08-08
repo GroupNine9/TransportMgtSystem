@@ -59,7 +59,7 @@
 }
 
 /* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
+.sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -74,7 +74,7 @@
 }
 
 /* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
+.sidenav a:hover{
   color: #f1f1f1;
 }
 
@@ -87,4 +87,19 @@
 }
 .text{
     color: green;
+}
+.dropdown p select{
+    background-color: green;
+    border: 1px green;
+    padding: 5px 5px 5px 5px;
+    width: 200px;
+    margin-left: 50px;
+}
+.btnsmall{
+     background-color: green;
+     color: white;
+     width: 200px;
+     padding: 15px 20px;
+     border: none;
+     cursor: pointer;
 }

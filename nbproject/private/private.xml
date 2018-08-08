@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/TransportManagementSystem/web/View/table.css</file>
-            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/TransportManagementSystem/web/View/PendingTrips.jsp</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/TransportManagementSystem/web/PendingAcademicTrips.jsp</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/TransportManagementSystem/web/View/newjsp.jsp</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/TransportManagementSystem/src/java/beans/Trip.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/TransportManagementSystem/web/View/ApprovalForm.jsp</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/TransportManagementSystem/src/java/Control/PendingAcademicTripsServelet.java</file>
         </group>
     </open-files>
 </project-private>

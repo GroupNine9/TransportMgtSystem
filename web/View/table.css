@@ -20,3 +20,31 @@ th{
     background-color: green;
     color: white;
 }
+.btn{
+  background-color: green;
+  color: white;
+  vertical-align: central;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+ }
+
+
+
+/*
+   <% Trip trip = new Trip();
+                ArrayList list = (ArrayList) trip.pendingtripList();
+                request.setAttribute("data", list);
+            %>
+            <c:forEach items ="${data}" var="trip">
+            <tr>
+                <td>${trip}</td>             
+                <td>${trip.getDestination}</td> 
+                <td>${trip.departuredate}</td> 
+                <td>${trip.returndate}</td> 
+                <td>${trip.duration}</td> 
+                <td>${trip.passengercount}</td> 
+                <td>${trip.department}</td> 
+            </tr>
+            </c:forEach>
+   */

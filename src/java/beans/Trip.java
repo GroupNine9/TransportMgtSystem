@@ -1,6 +1,7 @@
 package beans;
 
 import Model.MyDb;
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,27 +10,39 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Trip {
-   private String tripid, departuredate, returndate, passengercount, duration, destination;
+public class Trip implements Serializable{
+     MyDb db = new MyDb();
+   private String tripname, departuredate, returndate, passengercount, duration, destination,department;
    
    public Trip()
    {
-   tripid="";
+   tripname="";
    departuredate="";
    returndate="";
    passengercount="";
    duration="";
    destination="";
+   department="";
+   
    }
 
-    public String getTripid() {
-        return tripid;
+    public String getTripname() {
+        return tripname;
     }
 
-    public void setTripid(String tripid) {
-        this.tripid = tripid;
+    public void setTripname(String tripname) {
+        this.tripname = tripname;
     }
 
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    
     public String getDeparturedate() {
         return departuredate;
     }
@@ -62,57 +75,49 @@ public class Trip {
         this.duration = duration;
     }
 
-    public String getDestination() {
+    public String getDestination() throws SQLException {
+             db.getCon();
+             Statement stmt = db.con.createStatement();
+             String query = "select Destination from pendingacademictrips";
+             stmt.executeQuery(query);
+             
         return destination;
     }
 
     public void setDestination(String destination) {
         this.destination = destination;
     }
+    
    public ResultSet resultSet;
-    public void getPendingTrips()
+    public void getPendingTrips() throws SQLException
     {
-    try{
-        MyDb db = new MyDb();
+    
+        
         db.getCon();
         String query = "select * from pending_trips ";
         
         Statement stmt = db.con.createStatement();
-        try
-        {
-          resultSet = stmt.executeQuery(query);
-
-        }
-        
-        catch (SQLException ex) 
-            {
-                Logger.getLogger(Staff.class.getName()).log(Level.SEVERE, null, ex);
-            }
-          } 
-    catch (SQLException ex) 
-          {
-              Logger.getLogger(Staff.class.getName()).log(Level.SEVERE, null, ex);
-          }  
+        resultSet = stmt.executeQuery(query);
     }
-    public List pendingtripList(){
-        ArrayList list=new ArrayList();
-        try{
-           MyDb db = new MyDb();
+    
+    public List pendingtripList() throws SQLException{
+           ArrayList list=new ArrayList();
+      
            db.getCon();
            Statement st=db.con.createStatement();
+           
            ResultSet rs=st.executeQuery("select * from pendingacademictrips");
-           while(rs.next()){
+            while(rs.next())
+            {
                list.add(rs.getString("TripName"));
                list.add(rs.getString("Destination"));
                list.add(rs.getString("DepartureDate"));
                list.add(rs.getString("ReturnDate"));               
-               list.add(rs.getInt("Duration"));
-               list.add(rs.getInt("PassengerNumber"));
+               list.add(rs.getString("Duration"));
+               list.add(rs.getString("PassengerNumber"));
                list.add(rs.getString("Department"));
-
-                           }
             }
-        catch(Exception e){}
+       
     return list;
     }
 }

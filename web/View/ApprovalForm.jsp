@@ -7,6 +7,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="Model.MyDb"%>
+<% MyDb db = new MyDb(); db.getCon();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,18 +17,12 @@
     </head>
     <body>
         <form>
-<%
-        try {
-        MyDb db = new MyDb();
-        db.getCon();
+<%         
         String query = "select * from staff ";
-        String query2 = "select * from vehicles ";
-        
         Statement st = db.con.createStatement();
         ResultSet rs = st.executeQuery(query); 
-       
 %>
-      
+        <div class="dropdown">
         <p>Select Name 
             <select>
             <%
@@ -41,44 +36,27 @@
             %>
             </select>
         </p>
-<%
-            }
-            catch(Exception sqe)
-            { 
-            out.println(sqe);
-            }
-%>
-<%
-        try {
-        MyDb db = new MyDb();
-        db.getCon();
-        String query2 = "select * from vehicles ";
         
-        Statement st = db.con.createStatement();
-        ResultSet rs = st.executeQuery(query2); 
-       
+<%
+        String query2 = "select * from vehicles ";
+        Statement st2 = db.con.createStatement();
+        ResultSet rs2 = st2.executeQuery(query2); 
 %>
         <p>Select Vehicle :
             <select>
             <%
-            while(rs.next())
-            {
-            String fname = rs.getString("PLATENUMBER"); 
+                while(rs2.next())
+                {
+                String fname = rs2.getString("PLATENUMBER"); 
             %>
-            <option value="<%=fname %>"><%=fname %></option>
+                <option value="<%=fname %>"><%=fname %></option>
             <%
-            }
+                }
             %>
             </select>
         </p>
-<%
-            }
-            catch(Exception sqe)
-            { 
-            out.println(sqe);
-            }
-%>
-            <input class="btn" type="submit" value="APPROVE TRIP"/>
+        </div>
+        <input class="btnsmall" type="submit" value="APPROVE TRIP"/>
         </form>
     </body>
 </html>

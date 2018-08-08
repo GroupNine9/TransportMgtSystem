@@ -3,19 +3,11 @@
     <welcome-file-list>
         <welcome-file>View/management.jsp</welcome-file>
     </welcome-file-list>
-    <servlet>
-        <servlet-name>Home</servlet-name>
-        <servlet-class>Control.Home</servlet-class>
-    </servlet>
-    <servlet>
+        <servlet>
         <servlet-name>PendingAcademicTripsServelet</servlet-name>
         <servlet-class>Control.PendingAcademicTripsServelet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>Home</servlet-name>
-        <url-pattern>/Home</url-pattern>
-    </servlet-mapping>
-    <servlet>
+       <servlet>
         <servlet-name>RegisterStaffServelet</servlet-name>
         <servlet-class>Control.RegisterStaffServelet</servlet-class>
     </servlet>

@@ -2,14 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <link rel="stylesheet" type="text/css" href="management.css">
+     <link rel="stylesheet" type="text/css" href="form.css">
     
 </head>
 <body>
     <div class="sidenav">
-        <a href="View/RegisterStaff.jsp">REGISTER WORKER</a>
-        <a href="View/RegisterVehicle.jsp">VEHICLE</a>
-        <a href="View/Trips.jsp">TRIPS</a>
+        <a href="RegisterStaff.jsp">REGISTER STAFF</a>
+        <a href="RegisterVehicle.jsp">REGISTER VEHICLE</a>
+        <a href="Trips.jsp">VIEW TRIPS</a>
+        <a href="Trips.jsp">VIEW REPORTS</a>
+        <a href="Trips.jsp">ASSIGN TASKS</a>
     </div>
 	<div class="main">
 		
