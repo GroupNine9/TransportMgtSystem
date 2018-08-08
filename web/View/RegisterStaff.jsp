@@ -9,12 +9,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Worker</title>
         <link rel="stylesheet" type="text/css" href="form.css">
-
     </head>
     <body>
         <jsp:useBean id="staff" scope="request" class="beans.Staff"></jsp:useBean>
        <div class="sidenav">
-        <a href="mgtr.jsp">HOME</a>
+        <a href="managementback.jsp">HOME</a>
         <a href="RegisterVehicle.jsp">REGISTER VEHICLE</a>
         <a href="Trips.jsp">VIEW TRIPS</a>
     </div>
@@ -57,8 +56,27 @@
             <i class="fa fa-user icon"></i>
             <input class="input-field" type="text" placeholder="PASSWORD" name="password" value="<jsp:getProperty name="staff" property="password"/>"><br><br>
         </div>
-            <input type="submit" class="btn" value="ADD EMPLOYEE">
+            <input type="submit" class="btn" onclick="move()" value="ADD EMPLOYEE">
         </form>
         </div>
+        <div class="w3-light-grey">
+            <div id="myBar" class="cont" style="height:24px;width:1%;color:red"></div>
+       </div>
+
+<script>
+function move() {
+    var elem = RegisterStaff.getElementById("myBar"); 
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width + '%'; 
+        }
+    }
+}
+</script>
     </body>
 </html>

@@ -12,7 +12,7 @@
     <body>
         <jsp:useBean id="vehicle" scope="request" class="beans.Vehicle"></jsp:useBean>
     <div class="sidenav">
-        <a href="mgtr.jsp">HOME</a>
+        <a href="managementback.jsp">HOME</a>
         <a href="RegisterStaff.jsp">REGISTER WORKER</a>
         <a href="Trips.jsp">VIEW TRIPS</a>
     </div>
